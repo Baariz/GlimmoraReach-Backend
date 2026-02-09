@@ -53,10 +53,10 @@ const { estimateAudienceSize, generateBudgetRecommendation } = require('./servic
 const { generateTimeSeriesData } = require('./data/mockAnalytics');
 
 const app = express();
-const PORT = 5000;
+const PORT = process.env.PORT || 5000;
 
 // Middleware
-app.use(cors({ origin: 'http://localhost:5173' }));
+app.use(cors({ origin: ['https://glimmora-reach.netlify.app', 'http://localhost:5173'] }));
 app.use(express.json());
 
 // Make platform status available to routes
