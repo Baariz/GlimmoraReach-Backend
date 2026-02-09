@@ -221,7 +221,7 @@ app.get('/api/health', (req, res) => {
   res.json({ status: 'ok', timestamp: new Date().toISOString() });
 });
 
-app.listen(PORT, () => {
-  console.log(`Glimmora Reach API server running on http://localhost:${PORT}`);
+app.listen(PORT, '0.0.0.0', () => {
+  console.log(`Glimmora Reach API server running on port ${PORT}`);
   console.log('Data stored in backend/data/db/ as JSON files');
 });
