@@ -1,0 +1,83 @@
+// Mock platform and placement data - hardcoded for demo purposes
+// Future: These would come from real OAuth-connected platform APIs
+
+const platformStatus = {
+  google: {
+    name: 'Google Ads',
+    connected: true,
+    lastSync: new Date(Date.now() - 2 * 60 * 1000).toISOString(), // 2 minutes ago
+    accountId: 'GA-8834521790',
+    placements: [
+      { type: 'Search Ads', active: 4, total: 6 },
+      { type: 'Display', active: 6, total: 8 },
+      { type: 'YouTube', active: 2, total: 3 },
+    ],
+    metrics: {
+      impressions: 1080000,
+      clicks: 43200,
+      spend: 20000,
+      conversions: 864,
+    },
+    // Future: Real Google Ads API OAuth connection
+  },
+  meta: {
+    name: 'Meta',
+    connected: true,
+    lastSync: new Date(Date.now() - 5 * 60 * 1000).toISOString(), // 5 minutes ago
+    accountId: 'META-2291847563',
+    placements: [
+      { type: 'Feed', active: 5, total: 7 },
+      { type: 'Stories', active: 3, total: 4 },
+      { type: 'Reels', active: 2, total: 3 },
+    ],
+    metrics: {
+      impressions: 840000,
+      clicks: 33600,
+      spend: 12500,
+      conversions: 672,
+    },
+    // Future: Meta Marketing API integration
+  },
+  linkedin: {
+    name: 'LinkedIn',
+    connected: true,
+    lastSync: new Date(Date.now() - 8 * 60 * 1000).toISOString(), // 8 minutes ago
+    accountId: 'LI-PRO-5567890',
+    placements: [
+      { type: 'Sponsored Content', active: 3, total: 4 },
+      { type: 'InMail', active: 1, total: 2 },
+    ],
+    metrics: {
+      impressions: 480000,
+      clicks: 19200,
+      spend: 15000,
+      conversions: 311,
+    },
+    // Future: LinkedIn Marketing API integration
+  },
+};
+
+const placements = [
+  { id: 'pl-001', campaignId: 'camp-001', platform: 'Google', type: 'Search', status: 'delivering', impressions: 180000, clicks: 9000, spend: 4200, ctr: 5.0, startDate: '2025-06-01' },
+  { id: 'pl-002', campaignId: 'camp-001', platform: 'Google', type: 'Display', status: 'delivering', impressions: 120000, clicks: 3600, spend: 1800, ctr: 3.0, startDate: '2025-06-01' },
+  { id: 'pl-003', campaignId: 'camp-001', platform: 'Meta', type: 'Feed', status: 'delivering', impressions: 150000, clicks: 7500, spend: 2100, ctr: 5.0, startDate: '2025-06-01' },
+  { id: 'pl-004', campaignId: 'camp-002', platform: 'Google', type: 'YouTube', status: 'delivering', impressions: 320000, clicks: 9600, spend: 3800, ctr: 3.0, startDate: '2025-07-01' },
+  { id: 'pl-005', campaignId: 'camp-002', platform: 'Meta', type: 'Stories', status: 'delivering', impressions: 280000, clicks: 11200, spend: 3200, ctr: 4.0, startDate: '2025-07-01' },
+  { id: 'pl-006', campaignId: 'camp-002', platform: 'LinkedIn', type: 'Sponsored Content', status: 'delivering', impressions: 180000, clicks: 5400, spend: 4500, ctr: 3.0, startDate: '2025-07-01' },
+  { id: 'pl-007', campaignId: 'camp-003', platform: 'Meta', type: 'Feed', status: 'paused', impressions: 120000, clicks: 6000, spend: 1800, ctr: 5.0, startDate: '2025-11-15' },
+  { id: 'pl-008', campaignId: 'camp-003', platform: 'Meta', type: 'Reels', status: 'paused', impressions: 90000, clicks: 4500, spend: 1400, ctr: 5.0, startDate: '2025-11-15' },
+  { id: 'pl-009', campaignId: 'camp-004', platform: 'LinkedIn', type: 'Sponsored Content', status: 'delivering', impressions: 110000, clicks: 3300, spend: 4800, ctr: 3.0, startDate: '2025-08-01' },
+  { id: 'pl-010', campaignId: 'camp-004', platform: 'LinkedIn', type: 'InMail', status: 'delivering', impressions: 70000, clicks: 2100, spend: 3000, ctr: 3.0, startDate: '2025-08-01' },
+  { id: 'pl-011', campaignId: 'camp-006', platform: 'Google', type: 'YouTube', status: 'delivering', impressions: 420000, clicks: 12600, spend: 9200, ctr: 3.0, startDate: '2025-09-01' },
+  { id: 'pl-012', campaignId: 'camp-008', platform: 'LinkedIn', type: 'Sponsored Content', status: 'delivering', impressions: 150000, clicks: 4500, spend: 7200, ctr: 3.0, startDate: '2025-07-15' },
+  { id: 'pl-013', campaignId: 'camp-008', platform: 'Google', type: 'Search', status: 'delivering', impressions: 140000, clicks: 4200, spend: 7100, ctr: 3.0, startDate: '2025-07-15' },
+  { id: 'pl-014', campaignId: 'camp-010', platform: 'LinkedIn', type: 'Sponsored Content', status: 'pending', impressions: 45000, clicks: 1800, spend: 900, ctr: 4.0, startDate: '2025-10-15' },
+  { id: 'pl-015', campaignId: 'camp-010', platform: 'Meta', type: 'Feed', status: 'delivering', impressions: 100000, clicks: 4000, spend: 1200, ctr: 4.0, startDate: '2025-10-15' },
+  { id: 'pl-016', campaignId: 'camp-001', platform: 'Glimmora', type: 'Glimmora Display', status: 'delivering', impressions: 95000, clicks: 4750, spend: 1900, ctr: 5.0, startDate: '2025-06-01' },
+  { id: 'pl-017', campaignId: 'camp-002', platform: 'Glimmora', type: 'Glimmora Native', status: 'delivering', impressions: 160000, clicks: 6400, spend: 2200, ctr: 4.0, startDate: '2025-07-01' },
+  { id: 'pl-018', campaignId: 'camp-004', platform: 'Glimmora', type: 'Glimmora Search', status: 'delivering', impressions: 72000, clicks: 3600, spend: 1800, ctr: 5.0, startDate: '2025-08-01' },
+  { id: 'pl-019', campaignId: 'camp-006', platform: 'Glimmora', type: 'Glimmora Display', status: 'delivering', impressions: 130000, clicks: 5200, spend: 2100, ctr: 4.0, startDate: '2025-09-01' },
+  { id: 'pl-020', campaignId: 'camp-010', platform: 'Glimmora', type: 'Glimmora Native', status: 'delivering', impressions: 55000, clicks: 2750, spend: 900, ctr: 5.0, startDate: '2025-10-15' },
+];
+
+module.exports = { platformStatus, placements };

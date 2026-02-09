@@ -1,0 +1,34 @@
+[
+  {
+    "email": "admin@glimmora.com",
+    "password": "admin123",
+    "name": "Admin User",
+    "role": "admin",
+    "avatar": "AU",
+    "company": "Glimmora Inc"
+  },
+  {
+    "email": "manager@glimmora.com",
+    "password": "manager123",
+    "name": "Sarah Chen",
+    "role": "campaign_manager",
+    "avatar": "SC",
+    "company": "Glimmora Inc"
+  },
+  {
+    "email": "analyst@glimmora.com",
+    "password": "analyst123",
+    "name": "Raj Patel",
+    "role": "analyst",
+    "avatar": "RP",
+    "company": "Glimmora Inc"
+  },
+  {
+    "email": "demo@glimmora.com",
+    "password": "demo123",
+    "name": "Demo User",
+    "role": "viewer",
+    "avatar": "DU",
+    "company": "Demo Corp"
+  }
+]
