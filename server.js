@@ -57,7 +57,7 @@ const PORT = process.env.PORT || 5000;
 
 // Middleware
 app.use(cors({
-  origin: ['https://glimmora-reach.netlify.app', 'http://localhost:5173'],
+  origin: ['https://glimmora-reach.vercel.app', 'http://localhost:5173'],
   methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'x-user-email'],
 }));
